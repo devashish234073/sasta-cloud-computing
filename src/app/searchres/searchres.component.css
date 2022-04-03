@@ -1,0 +1,44 @@
+* {
+	outline:  none;
+}
+#topbar{
+background-color: rgb(35,47,62);
+width: 100%;
+color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top: -10px;
+margin-left: -10px;
+}
+#searchRes{
+background-color: rgb(35,47,62);
+width: 680px;
+margin-top: 0px;
+margin-left: 190px;
+height: 300px;
+padding: 5px;
+color: white;
+}
+#searchRes table{
+border-collapse: collapse;
+}
+#searchRes td{
+ border-left: 1px solid gray;
+ padding: 5px;
+}
+#dots{
+	display: inline;
+	margin-top: 0;
+}
+#dots td{
+	width: 3px;
+	height: 3px;
+	background-color: white;
+}
+#servicesearch{
+	background-color: rgb(22,25,31);
+	color: white;
+	height: 30px;
+	padding-left: 10px;
+	width: 500px;
+}

@@ -1,0 +1,21 @@
+<div id="topbar">
+<table>
+<tr>
+  <td>&nbsp;&nbsp;&nbsp;<img src="assets/scc_logo.png">&nbsp;&nbsp;</td>
+  <td><table id="dots">
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    </table></td>
+  <td>&nbsp;&nbsp;Services&nbsp;&nbsp;</td>
+  <td><input type="text" [(ngModel)]="searchText" (keyup)="showSearchResults()" id="servicesearch" placeholder="Search for services, features, blogs, docs, and more"></td>
+</tr>
+</table>
+</div>
+<!--<router-outlet></router-outlet>-->
+<div id="searchRes" [hidden]="searchResHidden">
+	<table>
+      <tr><td>Services ({{totalServicesCount}})</td><td>Features ({{totalFeaturesCount}})</td><td>Blogs ({{totalBlogsCount}})</td><td>Documentations ({{totalDocumentationsCount}})</td><td>Knowledge Articles ({{totalKBsCount}})</td></tr>
+	</table>
+	<hr>
+</div>
