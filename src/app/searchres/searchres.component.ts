@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SearchService } from '../search.service';
 @Component({
   selector: 'app-searchres',
   templateUrl: './searchres.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private searchService:SearchService) { }
 
   searchResHidden = true;
   totalServicesCount = 0;
@@ -15,6 +15,7 @@ export class SearchresComponent implements OnInit {
   totalBlogsCount = 0;
   totalDocumentationsCount = 0;
   totalKBsCount = 0;
+  data = [{"serviceName":"No results found","description":"","href":""}];
   searchText:string = "";
 
   showSearchResults() {
@@ -23,14 +24,15 @@ export class SearchresComponent implements OnInit {
     } else {
       this.searchResHidden = true;
     }
-    this.search(this.searchText);
+    this.data = this.searchService.search(this.searchText);
+    if(this.data==undefined) {
+      this.data = [{"serviceName":"No results found","description":"","href":""}]
+    } else {
+      this.totalServicesCount = this.data.length;
+    }
   }
 
   ngOnInit(): void {
-  }
-
-  search(value:string) {
-
   }
 
 }

@@ -13,6 +13,7 @@ margin-left: -10px;
 #searchRes{
 background-color: rgb(35,47,62);
 width: 680px;
+position: fixed;
 margin-top: 0px;
 margin-left: 190px;
 height: 300px;
@@ -22,7 +23,7 @@ color: white;
 #searchRes table{
 border-collapse: collapse;
 }
-#searchRes td{
+#searchRes #tab td{
  border-left: 1px solid gray;
  padding: 5px;
 }
@@ -41,4 +42,28 @@ border-collapse: collapse;
 	height: 30px;
 	padding-left: 10px;
 	width: 500px;
+}
+.desc{
+	color: rgb(169,183,184);
+	font-size:  14px;
+}
+.results{
+	background-color: rgb(44,58,77);
+	padding: 10px;
+	height: 80px;
+	margin-top: 10px;
+	border-top: 10px solid rgb(35,47,62);
+	border-radius: 12px;
+}
+.serviceName{
+	color: rgb(68,185,214);
+	display: inline;
+	text-decoration: none;
+}
+.serviceIcon{
+	display: inline;
+	margin-right: 15px;
+	height:15px;
+    width:20px;
+    border: 5px solid orange;
 }

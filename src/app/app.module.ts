@@ -8,22 +8,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchresComponent } from './searchres/searchres.component';
 
 import { FormsModule } from '@angular/forms';
+import { Ec2Component } from './ec2/ec2.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchresComponent
+    SearchresComponent,
+    Ec2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    /*RouterModule.forRoot([
-      {path:"c1",component:undefined},
-      {path:"c2",component:undefined},
-      {path:"c3",component:undefined},
-    ])*/
+    RouterModule.forRoot([
+      {path:"ec2",component:Ec2Component},
+      {path:"**",component:DashboardComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

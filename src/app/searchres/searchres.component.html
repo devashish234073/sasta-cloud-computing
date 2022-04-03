@@ -15,7 +15,8 @@
 <!--<router-outlet></router-outlet>-->
 <div id="searchRes" [hidden]="searchResHidden">
 	<table>
-      <tr><td>Services ({{totalServicesCount}})</td><td>Features ({{totalFeaturesCount}})</td><td>Blogs ({{totalBlogsCount}})</td><td>Documentations ({{totalDocumentationsCount}})</td><td>Knowledge Articles ({{totalKBsCount}})</td></tr>
+      <tr id="tab"><td>Services ({{totalServicesCount}})</td><td>Features ({{totalFeaturesCount}})</td><td>Blogs ({{totalBlogsCount}})</td><td>Documentations ({{totalDocumentationsCount}})</td><td>Knowledge Articles ({{totalKBsCount}})</td></tr>
+      <tr><td colspan="5"><hr></td></tr>
+      <tr *ngFor="let d of data"><td colspan="5" class="results"><div class="serviceIcon"></div><a href={{d.href}} class="serviceName">{{d.serviceName}}</a><p class="desc">{{d.description}}</p></td></tr>
 	</table>
-	<hr>
 </div>
