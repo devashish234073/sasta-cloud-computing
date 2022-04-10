@@ -1,0 +1,17 @@
+textarea {
+    resize:none;
+    background-color:black;
+    color: white;
+    width:98%;
+    height:300px;
+    z-index:1;
+}
+
+input[type='text'] {
+    width:98%;
+    background-color: black;
+    color:white;
+    border:none;
+    outline: none;
+    margin: 0;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.sidenav {
+  padding-top: 50px;
+  float:  left;
+  display: inline;
+  width: 21%;
+  border-right: 1px solid gray;
+}
+.sidenav a{
+  display: block;
+  text-decoration: none;
+  padding:  10px;
+  color:  rgb(84,91,100);
+}
+.sidenav a:hover{
+  color: orange;
+}
+#main {
+  float:  center;
+  display: inline;
+}
+#innerMain{
+  padding-left: 22%;
+}
+.labelHead {
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.ec2Td {
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:13px;
+}
+
+#ec2Images {
+  overflow-x: scroll;
+  display:block;
+  width:600px;
+}
+
+#ec2Images tr:nth-child(1) td {
+  background-color:rgb(240,250,250);
+}
+
+#ec2Processes {
+  overflow-x: scroll;
+  display:block;
+  width:600px;
+}
+
+#ec2Processes tr:nth-child(1) td {
+  background-color:rgb(240,250,250);
+}
+
+#containerLauncher {
+  float:right;
+  background-color:orange;
+  color:white;
+  font-weight: bold;
+  border:none;
+  outline:none;
+  padding:5px;
+}
+
+#containerLauncher:active {
+  background-color:white;
+  color:orange;
+}
+
+#imageArea p {
+  display: inline;
+}
+
+#imageArea{
+  width: 600px;
+  margin-top:20px;
+  margin-bottom:15px;
+}
+
+#imageList {
+  margin-left: 25%;
+  position:fixed;
+  top:70px;
+  width: 380px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#imageList li{
+  text-decoration: none;
+  padding:5px;
+  background-color: rgba(0,0,0,0.5);
+  width: 280px;
+  list-style-type:none;
+}
+
+#imageList button {
+  width: 280px;
+  height:30px;
+  border: none;
+  background-color: orange;
+  color:white;
+  font-weight: bold;
+}
+
+#imageList button:active {
+  background-color:white;
+  color:orange;
+}
+
+#imageList button:disabled {
+  background-color:gray;
+  color:white;
+}
+
+.closeButton {
+  width:15px;
+  height:15px;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  border:none;
+  padding:none;
+  float:right;
+  margin-left: 30px;
+  font-size: 9px;
+}
+
+.closeButton:active {
+  color: black;
+  background-color: orange;
+}

@@ -1,0 +1,2 @@
+<textarea #textarea [scrollTop]="textarea.scrollHeight" readonly>{{getTerminalOut()}}</textarea>
+<input type="text" (keyup)="checkKey($event)" [(ngModel)]="cmnd">

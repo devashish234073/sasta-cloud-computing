@@ -11,19 +11,26 @@ import { FormsModule } from '@angular/forms';
 import { Ec2Component } from './ec2/ec2.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { TerminalComponent } from './terminal/terminal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchresComponent,
-    Ec2Component
+    Ec2Component,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      {path:"ec2",component:Ec2Component},
+      {path:"ec2images",component:Ec2Component},
+      {path:"ec2processes",component:Ec2Component},
+      {path:"term",component:TerminalComponent},
       {path:"**",component:DashboardComponent}
     ])
   ],

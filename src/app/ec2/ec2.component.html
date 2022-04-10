@@ -1,1 +1,35 @@
-<p>ec2 works!</p>
+ <div class="sidenav">
+  New EC2 Experience<hr>
+  <a *ngFor="let e of menu" href={{e.path}}>{{e.name}}</a>
+</div>
+<div id="main">
+  <div id="innerMain">
+  <div *ngIf="getUrl()=='/ec2images'">
+  <div id="imageArea"><p class="labelHead">Images</p><button (click)="launchContainer()" id="containerLauncher">Launch Container</button></div>
+  <table id="ec2Images">
+    <tr *ngFor="let rowI of getDockerImages();let i = index">
+      <td *ngFor="let colI of rowI;let j = index;let l=last" class="ec2Td">{{colI}}<a *ngIf="i>=1 && j==0" [href]="'term?image='+colI" target="_blank"> [launch]</a><button class="closeButton" *ngIf="i>=1 && j==2" (click)="removeDockerImage($event)" [title]="colI">x</button></td>
+    </tr>
+  </table>
+  </div>
+
+  <div *ngIf="getUrl()=='/ec2processes'">
+  <p class="labelHead">Processes</p>
+  <table id="ec2Processes">
+    <tr *ngFor="let rowP of getDockerProcesses()">
+      <td *ngFor="let colP of rowP" class="ec2Td">{{colP}}</td>
+    </tr>
+  </table>
+  </div>
+  </div>
+</div> 
+
+<div id="imageList" [hidden]="containerChooserHidden">
+  <ul>
+    <li *ngFor="let image of imageNames.keys()">
+      <button [disabled]="imageNames.get(image)" (click)="createDockerImage($event)">
+        {{image}}
+       </button>
+    </li>
+  </ul>
+</div>
