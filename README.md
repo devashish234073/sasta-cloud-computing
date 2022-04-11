@@ -10,7 +10,7 @@ For each image, there's also a launch button to launch a web gui cli to run basi
 
 The frontend app can be run with "ng serve" command, the backend app can be run from the backend directory by running "node services.js"
 
-#Note: make sure you can run docker commands without sudo.
+# Note: make sure you can run docker commands without sudo.
 
 Here's the current UI for EC2:
 ![image](https://user-images.githubusercontent.com/20777854/162632801-071f421f-036c-4d06-a6aa-875a072d56e6.png)
