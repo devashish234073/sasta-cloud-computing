@@ -10,6 +10,8 @@ For each image, there's also a launch button to launch a web gui cli to run basi
 
 The frontend app can be run with "ng serve" command, the backend app can be run from the backend directory by running "node services.js"
 
+Demo video: https://www.youtube.com/watch?v=8k8C_N4iL9k
+
 # Note: make sure you can run docker commands without sudo.
 
 steps:
