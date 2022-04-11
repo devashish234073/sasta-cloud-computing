@@ -12,6 +12,12 @@ The frontend app can be run with "ng serve" command, the backend app can be run 
 
 # Note: make sure you can run docker commands without sudo.
 
+steps:
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+
+source: https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
+
 Here's the current UI for EC2:
 ![image](https://user-images.githubusercontent.com/20777854/162632801-071f421f-036c-4d06-a6aa-875a072d56e6.png)
 
